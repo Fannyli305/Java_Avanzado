@@ -1,5 +1,7 @@
 package Refactor;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         int []numeros = {12, 23, 45, 1, 9};
@@ -8,6 +10,7 @@ public class Main {
         imprimirMayorYMenor(numeros);
         imprimirMenoryMayor(numbers);
         imprimirMayorMenor(numers);
+        funcionImprimirMayorYMenor(numeros);
 
     }
 
@@ -46,6 +49,13 @@ public class Main {
 
         }
         System.out.println("mayor: " + mayor + " y menor : " + menor);
+    }
+
+    // para reducir el codigo programacion funcional
+    public static void funcionImprimirMayorYMenor(int []numeros){
+        int mayor = Arrays.stream(numeros).reduce(0, (a , b) -> a > b ? a: b);
+        int menor = Arrays.stream(numeros).reduce(0, (a , b) -> a < b ? a: b);
+        System.out.println("menor : " + menor + " y mayor : " + mayor);
     }
 
 }
