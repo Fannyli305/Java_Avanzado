@@ -3,13 +3,11 @@ package Refactor;
 public class Main {
     public static void main(String[] args) {
         int []numeros = {12, 23, 45, 1, 9};
-<<<<<<< HEAD
+
         int []numbers = {12, 23, -45, 1, 9};
         imprimirMayorYMenor(numeros);
         imprimirMenoryMayor(numbers);
-=======
-        imprimirMayorYMenor(numeros);
->>>>>>> origin/master
+
     }
 
     public  static void imprimirMayorYMenor(int []numeros){
@@ -25,7 +23,7 @@ public class Main {
         }
         System.out.println("mayor: " + mayor + " y menor : " + menor);
     }
-<<<<<<< HEAD
+
 
     // forma corta de un if
     public static void imprimirMenoryMayor(int []numbers){
@@ -37,6 +35,5 @@ public class Main {
         }
         System.out.println("menor : " + menor + " y mayor : " + mayor);
     }
-=======
->>>>>>> origin/master
+
 }
