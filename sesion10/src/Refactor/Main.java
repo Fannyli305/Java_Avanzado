@@ -3,10 +3,11 @@ package Refactor;
 public class Main {
     public static void main(String[] args) {
         int []numeros = {12, 23, 45, 1, 9};
-
+        int []numers = {12, -23,- 45, 1, 9};
         int []numbers = {12, 23, -45, 1, 9};
         imprimirMayorYMenor(numeros);
         imprimirMenoryMayor(numbers);
+        imprimirMayorMenor(numers);
 
     }
 
@@ -34,6 +35,17 @@ public class Main {
             menor = menor > numbers[i] ? numbers[i] : menor;
         }
         System.out.println("menor : " + menor + " y mayor : " + mayor);
+    }
+    // mas reducido el codigo
+    public static void imprimirMayorMenor(int  []numers){
+        int mayor = 0;
+        int menor = numers[0];
+        for(int i : numers){
+            mayor = mayor < i ? i:mayor;
+            menor = menor >i  ? i:menor;
+
+        }
+        System.out.println("mayor: " + mayor + " y menor : " + menor);
     }
 
 }
