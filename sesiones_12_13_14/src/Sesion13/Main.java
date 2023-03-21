@@ -25,10 +25,15 @@ public class Main {
         usuario.nombre = "pepe ";
         usuario.apellido = " botello";
 
+        Usuario usuario2 = new Usuario();
+        usuario.nombre = "paco ";
+        usuario.apellido = "pedraza";
+
         Usuarios usuarios = new Usuarios();
         try {
-            usuarios.añadirUsuario(usuario);
-            usuarios.añadirUsuario(usuario);
+            usuarios.añadirUsuarios(usuario);
+            usuarios.añadirUsuarios(usuario2);
+            usuarios.añadirUsuarios(usuario2);
         }catch (UserException e){
             System.out.println("Error al añadir objeto de usuario : " + e.getMessage());
         }
